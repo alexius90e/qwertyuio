@@ -16,7 +16,7 @@
     <script src="./js/okno-spasibo-v-1.js" defer></script>
   </head>
 
-  <body style="background-color: #1e1f23; min-height: 200dvh;">
+  <body style="background-color: #1e1f23; min-height: 200dvh">
     <section class="form-01">
       <div class="form-01__container">
         <div class="container">
@@ -61,7 +61,9 @@
                     <div class="form-01__select__option" data-value="2">Железной дорогой</div>
                     <div class="form-01__select__option" data-value="3">Авиаперевозки</div>
                     <div class="form-01__select__option" data-value="4">Морские перевозки</div>
-                    <div class="form-01__select__option" data-value="5">Мультимодальные перевозки</div>
+                    <div class="form-01__select__option" data-value="5">
+                      Мультимодальные перевозки
+                    </div>
                   </div>
 
                   <input type="hidden" name="customSelect" required />
@@ -96,6 +98,21 @@
                 placeholder="Ваша почта"
                 required
               />
+              
+              <label class="form-01__form-disclaimer">
+                <input
+                  class="form-01__form-disclaimer-input"
+                  type="checkbox"
+                  name="agreement"
+                  required
+                  checked
+                />
+                <span class="form-01__form-disclaimer-text">
+                  Заполняя эту форму, вы соглашаетесь с
+                  <a href="#">политикой конфиденциальности</a>
+                </span>
+              </label>
+
               <button class="form-01__form-button">РАССЧИТАТЬ СТОИМОСТЬ</button>
             </form>
           </div>
