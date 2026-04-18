@@ -1,0 +1,284 @@
+@import './variables';
+@import './mixins';
+
+.form-01 {
+  &__container {
+    padding: 0 15px;
+  }
+
+  &__wrapper {
+    margin: 0;
+    padding: 24px 26px;
+    box-sizing: border-box;
+    border: 0.5px solid #58637d;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #1e1f23 0.03%, #1d222e 35.69%, #163480 100%);
+
+    @include laptop {
+      padding: 24px 20px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 3px;
+    font-family: 'Onest', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #fff;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__description {
+    margin: 0 0 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #a1a1a4;
+
+    @include tablet {
+      font-size: 15px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0;
+
+    @include tablet {
+      gap: 14px;
+    }
+
+    &-input,
+    &-button,
+    &-select {
+      display: inline-block;
+      box-sizing: border-box;
+      border-radius: 5px;
+      outline: none;
+      transition-property: background-color, border-color, color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+    }
+
+    &-input {
+      flex: 0 0 calc(100% / 4 - 24px / 4 * 3);
+      max-width: calc(100% / 4 - 24px / 4 * 3);
+      min-height: 50px;
+      padding: 13px 20px;
+      font-family: 'Onest', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: rgba(152, 152, 152, 0.8);
+      border: 2px solid #272727;
+      background-color: #272727;
+
+      @include laptop {
+        flex: 0 0 calc(100% / 2 - 24px / 23);
+        max-width: calc(100% / 2 - 24px / 2);
+      }
+
+      @include tablet {
+        flex: 1 1 100%;
+        max-width: none;
+        min-height: 58px;
+        width: calc(16 / 14 * 100%);
+        margin: 0 -7%;
+        padding: 14px 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        line-height: 100%;
+        transform: scale(0.875);
+      }
+
+      &:focus {
+        color: $color-black;
+        border: 2px solid $color-white;
+        background-color: $color-white;
+      }
+
+      &:user-invalid {
+        border-color: $color-red;
+      }
+
+      &::placeholder {
+        font-weight: 400;
+        color: rgba(152, 152, 152, 0.8);
+      }
+
+      &:focus::placeholder {
+        color: $color-dark-gray;
+      }
+    }
+
+    &-select {
+      position: relative;
+      z-index: 10;
+      display: block;
+      flex: 0 0 calc(100% / 4 - 24px / 4 * 3);
+      max-width: calc(100% / 4 - 24px / 4 * 3);
+      min-height: 50px;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #272727;
+
+      @include laptop {
+        flex: 0 0 calc(100% / 2 - 24px / 23);
+        max-width: calc(100% / 2 - 24px / 2);
+      }
+
+      @include tablet {
+        flex: 1 1 100%;
+        max-width: none;
+        min-height: 58px;
+        width: calc(16 / 14 * 100%);
+        margin: 0 -7%;
+        box-sizing: border-box;
+        transform: scale(0.875);
+      }
+    }
+
+    &-button {
+      display: inline-block;
+      flex: 1 1 100%;
+      min-width: 176px;
+      min-height: 50px;
+      padding: 13px 15px;
+      box-sizing: border-box;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+      text-align: center;
+      color: $color-white;
+      text-transform: uppercase;
+      border-color: #285bd9;
+      background-color: #285bd9;
+      cursor: pointer;
+
+      @include tablet {
+        margin-top: 10px;
+      }
+
+      &:hover {
+        border-color: $color-black;
+        background-color: $color-black;
+      }
+    }
+  }
+
+  &__select {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    font-family: 'Onest', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: rgba(152, 152, 152, 0.8);
+
+    &__control {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      min-height: 50px;
+      padding: 13px 20px;
+      box-sizing: border-box;
+      font-family: 'Onest', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: rgba(152, 152, 152, 0.8);
+      border: 2px solid #272727;
+      border-radius: 5px;
+      background-color: #272727;
+      cursor: pointer;
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      &:focus {
+        color: $color-black;
+        border: 2px solid $color-white;
+        background-color: $color-white;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../assets/form-01/dropdown.svg) center / cover no-repeat;
+        transition: transform ease-out 0.2s;
+      }
+    }
+
+    &.open &__control {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &__value {
+      pointer-events: none;
+    }
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+      z-index: 100;
+      padding: 10px 0;
+      width: 100%;
+      border-radius: 5px;
+      background: #272727;
+    }
+
+    &__option {
+      padding: 5px 20px;
+      font-family: 'Onest', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: rgba(152, 152, 152, 0.8);
+      transition: color ease-out 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    /* состояния */
+    &.open {
+      .form-01__select__dropdown {
+        display: block;
+      }
+    }
+
+    &.focus {
+      .form-01__select__control {
+        border-color: #007bff;
+      }
+    }
+
+    &.invalid {
+      .form-01__select__control {
+        border-color: red;
+      }
+    }
+  }
+}

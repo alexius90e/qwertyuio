@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/form-01.css" />
+    <link rel="stylesheet" href="./css/okno-spasibo-v-1.css" />
+    <script src="./js/form-01.js" defer></script>
+    <script src="./js/okno-spasibo-v-1.js" defer></script>
+  </head>
+
+  <body style="background-color: #1e1f23; min-height: 200dvh;">
+    <section class="form-01">
+      <div class="form-01__container">
+        <div class="container">
+          <div class="form-01__wrapper">
+            <div class="form-01__title">Заполните форму доставки</div>
+
+            <div class="form-01__description">
+              После подачи наш логист свяжется с вами для уточнения дополнительных деталей
+            </div>
+
+            <form class="form-01__form form-with-okno-spasibo">
+              <input
+                class="form-01__form-input"
+                type="text"
+                name="name"
+                placeholder="Ваше имя"
+                required
+              />
+              <input
+                class="form-01__form-input"
+                type="tel"
+                name="phone"
+                placeholder="Ваш телефон"
+                required
+              />
+              <input
+                class="form-01__form-input"
+                type="text"
+                name="weight"
+                placeholder="Вес груза в кг"
+                required
+              />
+
+              <div class="form-01__form-select">
+                <div class="form-01__select" data-select>
+                  <div class="form-01__select__control" tabindex="0">
+                    <span class="form-01__select__value">Вид транспорта (выберите)</span>
+                  </div>
+
+                  <div class="form-01__select__dropdown">
+                    <div class="form-01__select__option" data-value="1">Автомобильные</div>
+                    <div class="form-01__select__option" data-value="2">Железной дорогой</div>
+                    <div class="form-01__select__option" data-value="3">Авиаперевозки</div>
+                    <div class="form-01__select__option" data-value="4">Морские перевозки</div>
+                    <div class="form-01__select__option" data-value="5">Мультимодальные перевозки</div>
+                  </div>
+
+                  <input type="hidden" name="customSelect" required />
+                </div>
+              </div>
+
+              <input
+                class="form-01__form-input"
+                type="text"
+                name="departure"
+                placeholder="Город отправления"
+                required
+              />
+              <input
+                class="form-01__form-input"
+                type="text"
+                name="destination"
+                placeholder="Город назначения"
+                required
+              />
+              <input
+                class="form-01__form-input"
+                type="text"
+                name="volume"
+                placeholder="Объем"
+                required
+              />
+              <input
+                class="form-01__form-input"
+                type="email"
+                name="email"
+                placeholder="Ваша почта"
+                required
+              />
+              <button class="form-01__form-button">РАССЧИТАТЬ СТОИМОСТЬ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="okno-spasibo-v-1">
+      <div class="okno-spasibo-v-1__body">
+        <div class="okno-spasibo-v-1__content">
+          <div class="okno-spasibo-v-1__title">Спасибо!</div>
+
+          <div class="okno-spasibo-v-1__description">
+            Мы получили вашу заявку, свяжемся с вами в ближайшее время.
+          </div>
+
+          <div class="okno-spasibo-v-1__description">
+            В рабочее время мы отвечаем в течении 1 часа, в нерабочее - вначале следующего дня.
+          </div>
+
+          <div class="okno-spasibo-v-1__disclaimer">Если вопрос срочный, позвоните:</div>
+
+          <div class="okno-spasibo-v-1__phone">
+            <a class="okno-spasibo-v-1__phone-link" href="tel:88005553333">8 800 555-33-33</a>
+          </div>
+        </div>
+
+        <div class="okno-spasibo-v-1__close">
+          <button class="okno-spasibo-v-1__close-button"></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

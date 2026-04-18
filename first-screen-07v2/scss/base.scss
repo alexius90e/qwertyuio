@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import './variables';
+@import './mixins';
+
+html {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: var(--color-black);
+  background-color: var(--color-white);
+
+  &.hidden {
+    @include laptop {
+      overflow: hidden;
+    }
+  }
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+}
+
+.container {
+  display: block;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  @include desktop {
+    padding: 0 20px;
+  }
+
+  @include mobile {
+    padding: 0 15px;
+  }
+
+  @include mobilesm {
+    padding: 0 10px;
+  }
+}
+
+.button {
+  display: inline-block;
+  min-width: 176px;
+  min-height: 50px;
+  padding: 13px 15px;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  color: #1e674e;
+  border: 2px solid #1e674e;
+  transition-property: background-color, border-color, color;
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+  cursor: pointer;
+
+  &_light {
+    color: #1e674e;
+    border-color: #1e674e;
+    background-color: $color-white;
+
+    &:hover {
+      color: $color-white;
+      background-color: #1e674e;
+    }
+  }
+
+  &_dark {
+    color: $color-white;
+    border-color: #1e674e;
+    background-color: #1e674e;
+
+    &:hover {
+      border-color: $color-black;
+      background-color: $color-black;
+    }
+  }
+
+  &_secondary {
+    color: $color-dark-gray;
+    border-color: $color-gray;
+    background-color: $color-gray;
+
+    &:hover {
+      color: $color-white;
+      border-color: #1e674e;
+      background-color: #1e674e;
+    }
+  }
+}
